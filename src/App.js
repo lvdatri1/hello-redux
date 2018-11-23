@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Money from './components/Money';
+import Counter from './components/Counter';
+import ListFeature from './containers/ListFeature';
+import ListMoney from './containers/ListMoney';
+
 
 class App extends Component {
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    // const {value, onIncrement, onDecrement} = this.props.counter;
+    // const {amount, onDeposit, onWithdraw} = this.props.money;
+    console.log("step 1 inside render of App ()",this.props);
+
+    return ( <div>
+
+    <ListFeature />
+    <ListMoney />
+
+    </div>
+      );
   }
 }
 
 export default App;
+
+
+{/* <Counter value={value} onIncrement={onIncrement} onDecrement={onDecrement}/>
+    <Money amount={amount} onDeposit={onDeposit} onWithdraw={onWithdraw} /> */}
