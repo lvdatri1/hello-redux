@@ -6,11 +6,14 @@ export default class Person extends Component {
       console.log('person data :', personData);
       const gender = personData.gender;
       const name = personData.name.first + ' ' + personData.name.last;
+    //   const pic = personalData.picture.thumbnail;
+         const pic = personData.picture.thumbnail;
     return (
       <div>
-          name : {name}
-          gender: {gender}
+      <img src={pic} />           name : {name}  {' '}
+          gender: {gender} 
           
+    
 
         
       </div>

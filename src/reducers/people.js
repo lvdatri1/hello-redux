@@ -11,7 +11,7 @@ const people = (state = {people: [], isLoading: false, page: 1}, action ) =>{
         }
         
         case "RECEIVE_PEOPLE":
-        return {...state, people : action.people, isLoading: false, page: state.page +1
+        return {...state, people : state.people.concat(action.people), isLoading: false, page: state.page +1
 
         }
          default:
