@@ -7,7 +7,7 @@ class Counter extends Component {
         
     }
     componentDidMount(){
-      this.props.onReload();
+  //    this.props.onReload();
     }
     onDoubleClick(){
 console.log(this.props);

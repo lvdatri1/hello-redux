@@ -8,12 +8,15 @@ import thunk from 'redux-thunk';
 import RootReducer from './reducers';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
+import { createLogger } from 'redux-logger';
 
 
 
 
 console.log(RootReducer);
-const store = createStore(RootReducer, applyMiddleware(thunk));
+const middleware = [ thunk ];
+middleware.push(createLogger());
+const store = createStore(RootReducer, applyMiddleware(...middleware));
 
 const host = 'http://localhost:3000';
 

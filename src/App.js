@@ -5,7 +5,8 @@ import Money from './components/Money';
 import Counter from './components/Counter';
 import ListFeature from './containers/ListFeature';
 import ListMoney from './containers/ListMoney';
-
+import People from './containers/People';
+import ListPeople from './components/ListPeople';
 
 class App extends Component {
 
@@ -18,9 +19,9 @@ class App extends Component {
 
     <ListFeature />
     <ListMoney />
-
-    </div>
-      );
+    <People />
+ </div>
+ )
   }
 }
 

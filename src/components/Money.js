@@ -7,7 +7,7 @@ class Money extends Component {
        this.handleChange = this.handleChange.bind(this);
    }
    componentDidMount(){
-     this.props.onReload();
+    //  this.props.onReload();
    }
    handleChange(event){
        this.setState({value: event.target.value});
