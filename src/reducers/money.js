@@ -24,7 +24,7 @@ const money = (state ={amount: 0, isLoading: false}, action) => {
     }
     case "RECEIVE_MONEY":
     {
-      return {...state, amount: action.amount}
+      return {...state, amount: action.amount, isLoading: false}
     }  
     default: {
       // console.log('in defaut of money', action);

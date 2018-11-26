@@ -23,7 +23,11 @@ export const fetchCounter = () =>{
         .then(data => { return dispatch(receiveCounter(data.counter));
 
         })
-        .catch(error => {console.log('eerrr', error)})
+        .catch(error => {
+            console.log('eerrr', error);
+            return dispatch(receiveCounter(99));
+            
+        })
         .catch(err => {console.log('error 2', err)});
     }
 }
@@ -32,11 +36,11 @@ export const receiveCounter = (data) =>{
 }
 export const requestMoney=()=>
 {
-    console.log('Request money');
+    // console.log('Request money');
     return {type: 'REQUEST_MONEY'}
 }
 export const fetchMoney = ()=> {
-    console.log('request reload money');
+    // console.log('request reload money');
     return dispatch =>{
         dispatch(requestMoney());
         return fetch(host)
@@ -44,8 +48,14 @@ export const fetchMoney = ()=> {
         .then(data => { return dispatch(receiveMoney(data.money));
 
         })
-        .catch(error => {console.log('eerrr', error)})
-        .catch(err => {console.log('error 2', err)});
+        .catch(error => {
+            console.log('eerrr', error);
+            return dispatch(receiveMoney(999));
+        })
+        .catch(err => {
+            console.log('error 2', err);
+            return dispatch(receiveMoney(999));
+        });
     }
 }
 export const receiveMoney = (data) =>{
@@ -77,10 +87,10 @@ const hostPeople= 'https://randomuser.me/api/?results=10&seed=abc'
 
 
 export const fetchPeople = (page)=> {
-    console.log('request reload fetch people');
+    // console.log('request reload fetch people');
     return dispatch =>{
        dispatch(requestPeople());
-        console.log('request reload fetch people 2');
+        // console.log('request reload fetch people 2');
 
         return fetch(hostPeople + '&page=' + page)
         .then(response => response.json())

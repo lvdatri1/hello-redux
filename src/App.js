@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     // const {value, onIncrement, onDecrement} = this.props.counter;
     // const {amount, onDeposit, onWithdraw} = this.props.money;
-    console.log("step 1 inside render of App ()",this.props);
+    // console.log("step 1 inside render of App ()",this.props);
 
     return ( <div>
 

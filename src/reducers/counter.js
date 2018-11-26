@@ -3,7 +3,7 @@ import Apicall from "../utils/Apicall";
 const host = "http://localhost:3000/data";
 
 const counter = (state = { value: 0, isLoading: false }, action) => {
-  console.log('inside reducer', action);
+  // console.log('inside reducer', action);
   
   switch (action.type) {
     case "INCREMENT": {
@@ -13,7 +13,7 @@ const counter = (state = { value: 0, isLoading: false }, action) => {
     case "SET_COUNTER":
       return { ...state, value: action.value };
     case "REQUEST_COUNTER": {
-      console.log("are you here");
+      // console.log("are you here");
       return { ...state, isLoading: true };
     }
     case "RECEIVE_COUNTER": {
@@ -25,7 +25,7 @@ const counter = (state = { value: 0, isLoading: false }, action) => {
     }
     default:
     {
-      console.log("in default state", state);
+      // console.log("in default state", state);
       return state;
     }
       

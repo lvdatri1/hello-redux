@@ -1,10 +1,10 @@
 const people = (state = {people: [], isLoading: false, page: 1}, action ) =>{
-    console.log('inside reducer of people - state', state);
-    console.log('inside reducer of people - action', action);
+    // console.log('inside reducer of people - state', state);
+    // console.log('inside reducer of people - action', action);
     switch (action.type){
         case "REQUEST_PEOPLE":
         {
-            console.log('request to increase page',state);
+            // console.log('request to increase page',state);
             return{ ...state, isLoading: true, 
 
             }
