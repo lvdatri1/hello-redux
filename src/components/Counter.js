@@ -7,17 +7,14 @@ class Counter extends Component {
         
     }
     componentDidMount(){
-  //    this.props.onReload();
+      this.props.onReload();
     }
     onDoubleClick(){
-// console.log(this.props);
 this.props.onIncrement();
 this.props.onIncrement();
     }
   render() {
       const {value, onIncrement, onDecrement, onReload, isLoading}= this.props;
-      // console.log('step 2 inside render of compoent Counter', this.props);
-      // console.log('heheh', value);
    if(isLoading) {
      console.log('inside loading',isLoading);
      return (<div> loading</div>)

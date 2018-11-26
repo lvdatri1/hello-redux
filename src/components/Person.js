@@ -21,7 +21,7 @@ export default class Person extends Component {
          const pic = personData.picture.thumbnail;
     return (
       <div>
-      <img src={pic} />           name : {name}  {' '}
+      <img src={pic} alt={name} />           name : {name}  {' '}
           gender: {gender} 
           
     {isMore?<div>{city}</div>:<div>no</div> }
