@@ -78,3 +78,9 @@ export const fetchPeople = (page = 1) => {
       });
   };
 };
+
+export const filterPeople=(people, gender)=>{
+    if (gender==='all') return people;
+    else  return people.filter(person=>person.gender==gender);
+
+}
