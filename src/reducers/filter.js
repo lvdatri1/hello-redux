@@ -1,19 +1,20 @@
-const filter = (state='all', action)=>{
+const filter = (state = 'all', action) => {
+    console.log('inside reducer fitler', action);
     switch (action.type) {
         case "FILTER_MALE":
-        {
-            return 'MALE';
-        }
+            {
+                return 'male';
+            }
         case "FILTER_FEMALE":
-        {
-            return 'FEMALE';
-        }
+            {
+                return 'female';
+            }
         case "FILTER_ALL":
-        {
-            return 'ALL';
-        }
+            {
+                return 'all';
+            }
         default:
-        return state;
+            return state;
 
     }
 

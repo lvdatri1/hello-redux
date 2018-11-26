@@ -2,7 +2,7 @@ const host = "http://localhost:3000/data";
 //const host = 'https://www.reddit.com/r/reactjs.json';
 
 export const requestCounter = () => {
-//   console.log("heelo");
+  //   console.log("heelo");
   return { type: "REQUEST_COUNTER" };
 };
 export const fetchCounter = () => {
@@ -79,8 +79,11 @@ export const fetchPeople = (page = 1) => {
   };
 };
 
-export const filterPeople=(people, gender)=>{
-    if (gender==='all') return people;
-    else  return people.filter(person=>person.gender===gender);
+export const filterPeople = (people, gender) => {
+  if (gender === 'all') return people;
+  else return people.filter(person => person.gender === gender);
 
+}
+export const fetchFilter = async (gender) => {
+  return gender;
 }
